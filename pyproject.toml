@@ -1,0 +1,28 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "mcp-protocol-version-adapter"
+version = "0.1.0"
+description = "Bi-directional protocol adapter transparently translating MCP protocol message versions, headers, and notification envelopes"
+readme = "README.md"
+requires-python = ">=3.9"
+license = {text = "MIT"}
+authors = [
+    {name = "Ejaj Mahmud", email = "dev@ejajmahmud.com"}
+]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+]
+dependencies = []
+
+[project.scripts]
+mcp-protocol-version-adapter = "mcp_protocol_version_adapter.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["mcp_protocol_version_adapter*"]
